@@ -7,3 +7,17 @@ steps:
   commands:
   - npm install
   - npm run build
+- name: deploy
+  image: drillster/drone-rsync
+  settings:
+    hosts:
+      from_secret: my_blog_host
+    port:
+      from_secret: my_blog_port
+    key:
+      from_secret: my_blog_key
+    target:
+      from_secret: my_blog_key
+    source: /drone/src/build/*
+    recursive: true
+    delete: true
