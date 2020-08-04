@@ -18,6 +18,8 @@ steps:
       from_secret: my_blog_key
     target:
       from_secret: my_blog_key
+    user:
+      from_secret: my_blog_user
     source: /drone/src/build/*
     recursive: true
     delete: true
