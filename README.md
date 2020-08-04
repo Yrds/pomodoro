@@ -1,5 +1,7 @@
 # Pomodoro
 
+[![Build Status](https://drone.yurisantos.dev/api/badges/Yrds/pomodoro/status.svg)](https://drone.yurisantos.dev/Yrds/pomodoro)
+
 ![Pomodoro React App](https://raw.githubusercontent.com/Yrds/pomodoro/master/images/screenshot.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
