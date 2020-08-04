@@ -26,13 +26,17 @@ class Timer extends Component<TimerProps, TimerState> {
 
   public readonly state = {
     currentTime: new Date(),
-    endTime: new Date((new Date()).getTime() + 1000 * this.props.workMinutes), //TODO * 60
+    endTime: this.getEndTime(this.props.workMinutes),
     selectedTimer: timerType.WORK,
     isPaused: true
   }
 
   startTimer() {
     this.setState({isPaused: false});
+  }
+
+  getEndTime(minutes: number) {
+    return new Date((new Date()).getTime() + 1000 * 60 * minutes);
   }
 
   pauseTimer() {
@@ -46,7 +50,7 @@ class Timer extends Component<TimerProps, TimerState> {
   resetTimer(timerType: timerType){
     this.setState({
       currentTime: new Date(),
-      endTime: new Date((new Date()).getTime() + 1000 * this.getMinutesByTimerType(timerType)),
+      endTime: this.getEndTime(this.getMinutesByTimerType(timerType)),
       isPaused: true,
       selectedTimer: timerType
     })
