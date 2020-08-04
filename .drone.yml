@@ -20,6 +20,8 @@ steps:
       from_secret: my_blog_target
     user:
       from_secret: my_blog_user
+    args:
+      from_secret: my_blog_rsyng_args
     source: /drone/src/build/*
     recursive: true
     delete: true
