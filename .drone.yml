@@ -17,7 +17,7 @@ steps:
     key:
       from_secret: my_blog_key
     target:
-      from_secret: my_blog_key
+      from_secret: my_blog_target
     user:
       from_secret: my_blog_user
     source: /drone/src/build/*
