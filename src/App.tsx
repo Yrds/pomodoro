@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {StyledHeader} from './components/Styled/Header';
 import Timer from './components/Timer';
 import TimerInput from './components/TimerInput';
+import ProjectLinks from './components/ProjectLinks';
 import { GlobalStyle } from './App.style';
 import { StyledContainer } from './components/Styled/Container';
 
@@ -51,6 +52,7 @@ class App extends Component<any, AppState> {
             workMinutes={this.state.workMinutes}
             breakMinutes={this.state.breakMinutes}/>
           <TimerInput onSubmitForm={this.timerInputSubmit}/>
+          <ProjectLinks/>
         </StyledContainer>
       </>
     );
