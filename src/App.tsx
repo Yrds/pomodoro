@@ -45,7 +45,7 @@ class App extends Component<any, AppState> {
         <GlobalStyle/>
         <StyledContainer>
           <StyledHeader>
-            Pomodoro
+            Pomodoro Timer
           </StyledHeader>
           <Timer
             workMinutes={this.state.workMinutes}
